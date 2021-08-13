@@ -27,16 +27,7 @@ router.put(`/workouts/:id`, (req, res) => {
 router.get("/workouts", (req, res) => {
     console.log('running')
     db.Workout.find({}).then(allWorkout => {
-        console.log(all)
-        // allWorkout.forEach(workout => {
-        //     var total = 0;
-        //     workout.exercises.forEach(exercise => {
-        //         total += exercise.duration;
-        //     });
-        //     workout.totalDuration = total;
-
-        // });
-        // console.log(allWorkout.exercises);
+       
         res.json(allWorkout);
     }).catch(err => {
         res.json(err);
