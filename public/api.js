@@ -1,6 +1,6 @@
 const totalDurationFunc = (json) => {
   json.forEach((workout) => {
-    console.log(workout)
+    
     let total = 0
     workout.exercises.forEach((ex) => {
       total += ex.duration
